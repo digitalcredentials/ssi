@@ -3,5 +3,6 @@
  */
 export * from './LD'
 export * from './DID'
+export * from './KeyPair'
 export { IVerifiableCredential } from './VerifiableCredential'
 export { IVerifiablePresentation } from './VerifiablePresentation'

@@ -3,7 +3,7 @@
 [![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/ssi/Node.js%20CI)](https://github.com/digitalcredentials/ssi/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/ssi.svg)](https://npm.im/@digitalcredentials/ssi)
 
-> Typescript types for the W3C Verifiable Credentials Data Model.
+> Typescript types for the W3C Verifiable Credentials Data Model, DID Core, cryptosuites, etc.
 
 ## Table of Contents
 
@@ -81,10 +81,10 @@ npm install
 ## Usage
 
 ```ts
-import { VerifiableCredential, VerifiablePresentation } from '@digitalcredentials/ssi'
+import { IVerifiableCredential, IVerifiablePresentation } from '@digitalcredentials/ssi'
 
 // for example, in an Express route definition:
-const vp = req.body.presentation as VerifiablePresentation
+const vp = req.body.presentation as IVerifiablePresentation
 ```
 
 ## Contribute

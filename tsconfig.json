@@ -13,8 +13,7 @@
   },
   "include": [
     "src/**/*",
-    ".eslintrc.js",
-    "karma.conf.js"
+    ".eslintrc.js"
   ],
   "exclude": ["test", "node_modules", "dist"]
 }

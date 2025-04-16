@@ -1,7 +1,7 @@
-# Verifiable Credentials Data Model _(@digitalcredentials/vc-data-model)_
+# Verifiable Credentials Data Model _(@digitalcredentials/ssi)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/vc-data-model/Node.js%20CI)](https://github.com/digitalcredentials/vc-data-model/actions?query=workflow%3A%22Node.js+CI%22)
-[![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/vc-data-model.svg)](https://npm.im/@digitalcredentials/vc-data-model)
+[![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/ssi/Node.js%20CI)](https://github.com/digitalcredentials/ssi/actions?query=workflow%3A%22Node.js+CI%22)
+[![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/ssi.svg)](https://npm.im/@digitalcredentials/ssi)
 
 > Typescript types for the W3C Verifiable Credentials Data Model.
 
@@ -29,7 +29,7 @@ specification.
 
 Inspired by / incorporates elements of other VC Typescript libraries:
 
-* https://github.com/Sphereon-Opensource/veramo (`/packages/core/src/types/vc-data-model.ts`)
+* https://github.com/Sphereon-Opensource/veramo (`/packages/core/src/types/ssi.ts`)
 * https://github.com/transmute-industries/verifiable-data (`/packages/vc.js/src/types/`)
 * https://github.com/learningeconomy/LearnCard (`/packages/learn-card-core/src/types/`)
 * Existing type definitions in DCC libraries (in `learner-credential-wallet` and others)
@@ -52,7 +52,7 @@ of the specification (which will likely make breaking changes). So, in the futur
 
 ```
 "dependencies": {
-   "@digitalcredentials/vc-data-model": "^2.0.0"
+   "@digitalcredentials/ssi": "^2.0.0"
 }
 ```
 
@@ -65,7 +65,7 @@ of the specification (which will likely make breaking changes). So, in the futur
 To install via NPM:
 
 ```
-npm install @digitalcredentials/vc-data-model
+npm install @digitalcredentials/ssi
 ```
 
 ### Development
@@ -73,15 +73,15 @@ npm install @digitalcredentials/vc-data-model
 To install locally (for development):
 
 ```
-git clone https://github.com/digitalcredentials/vc-data-model.git
-cd vc-data-model
+git clone https://github.com/digitalcredentials/ssi.git
+cd ssi
 npm install
 ```
 
 ## Usage
 
 ```ts
-import { VerifiableCredential, VerifiablePresentation } from '@digitalcredentials/vc-data-model'
+import { VerifiableCredential, VerifiablePresentation } from '@digitalcredentials/ssi'
 
 // for example, in an Express route definition:
 const vp = req.body.presentation as VerifiablePresentation
@@ -96,4 +96,4 @@ If editing the Readme, please conform to the
 
 ## License
 
-[MIT License](LICENSE.md) © 2022 Digital Credentials Consortium.
+[MIT License](LICENSE.md) © 2022-2025 Digital Credentials Consortium.

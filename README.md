@@ -29,7 +29,7 @@ specification.
 
 Inspired by / incorporates elements of other VC Typescript libraries:
 
-* https://github.com/Sphereon-Opensource/veramo (`/packages/core/src/types/ssi.ts`)
+* https://github.com/Sphereon-Opensource/veramo (`/packages/core/src/types/vc-data-model.ts`)
 * https://github.com/transmute-industries/verifiable-data (`/packages/vc.js/src/types/`)
 * https://github.com/learningeconomy/LearnCard (`/packages/learn-card-core/src/types/`)
 * Existing type definitions in DCC libraries (in `learner-credential-wallet` and others)

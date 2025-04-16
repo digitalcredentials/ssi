@@ -1,40 +1,24 @@
 /*!
- * Copyright (c) 2022 Digital Credentials Consortium. All rights reserved.
+ * Copyright (c) 2022-2025 Digital Credentials Consortium. All rights reserved.
  */
-export type LDType = string | string[];
+import { ILdType, ILinkedDataObject } from './LD';
 
-export interface ImageObject {
-  id: string;
-  type?: LDType;
-  [x: string]: any;
-}
-
-export interface LinkedDataObject {
-  // id and type are very common to all Linked Data objects
-  id?: string;
-  type?: LDType;
-
-  name?: string;
-  description?: string;
-  image?: string | ImageObject;
-}
-
-export interface IssuerObject extends LinkedDataObject {
+export interface IIssuerObject extends ILinkedDataObject {
   id: string;
   url?: string;
 
   [x: string]: any;
 }
 
-export type VerifiableCredential = VCDIVerifiableCredential | CompactJWT;
+export type IVerifiableCredential = IVCDIVerifiableCredential | ICompactJWT;
 
 // Represents a Json Web Token in compact form: "header.payload.signature"
-export type CompactJWT = string;
+export type ICompactJWT = string;
 
 // Represents a Verifiable Credential protected by
 //   the Verifiable Credential Data Integrity 1.0 spec
 // @see https://www.w3.org/TR/vc-data-integrity/
-export interface VCDIVerifiableCredential extends LinkedDataObject {
+export interface IVCDIVerifiableCredential extends ILinkedDataObject {
   // The first element of the @context array must be the VC context itself
   // Subsequent elements are either URLs for other contexts OR
   // inline context objects.
@@ -45,10 +29,10 @@ export interface VCDIVerifiableCredential extends LinkedDataObject {
   id?: string;
 
   // https://w3c.github.io/vc-data-model/#types
-  type: LDType;
+  type: ILdType;
 
   // https://w3c.github.io/vc-data-model/#issuer
-  issuer: string | IssuerObject;
+  issuer: string | IIssuerObject;
 
   // https://w3c.github.io/vc-data-model/#validity-period
   validFrom?: string;
@@ -57,31 +41,31 @@ export interface VCDIVerifiableCredential extends LinkedDataObject {
   validUntil?: string;
 
   // https://w3c.github.io/vc-data-model/#credential-subject
-  credentialSubject: CredentialSubject | CredentialSubject[];
+  credentialSubject: ICredentialSubject | ICredentialSubject[];
 
   // https://w3c.github.io/vc-data-model/#status
-  credentialStatus?: CredentialStatus | CredentialStatus[];
+  credentialStatus?: ICredentialStatus | ICredentialStatus[];
 
   // https://w3c.github.io/vc-data-model/#data-schemas
-  credentialSchema?: CredentialSchema | CredentialSchema[];
+  credentialSchema?: ICredentialSchema | ICredentialSchema[];
 
   // https://w3c.github.io/vc-data-model/#integrity-of-related-resources
-  relatedResource?: RelatedResource | RelatedResource[];
+  relatedResource?: IRelatedResource | IRelatedResource[];
 
   // https://w3c.github.io/vc-data-model/#evidence
-  evidence?: Evidence | Evidence[];
+  evidence?: IEvidence | IEvidence[];
 
   // https://w3c.github.io/vc-data-model/#refreshing
-  refreshService?: RefreshService | RefreshService[];
+  refreshService?: IRefreshService | IRefreshService[];
 
   // https://w3c.github.io/vc-data-model/#terms-of-use
-  termsOfUse?: TermsOfUse | TermsOfUse[];
+  termsOfUse?: ITermsOfUse | ITermsOfUse[];
 
   // https://w3c-ccg.github.io/confidence-method-spec
-  confidenceMethod?: ConfidenceMethod | ConfidenceMethod[];
+  confidenceMethod?: IConfidenceMethod | IConfidenceMethod[];
 
   // https://w3c-ccg.github.io/vc-render-method
-  renderMethod?: RenderMethod | RenderMethod[];
+  renderMethod?: IRenderMethod | IRenderMethod[];
 
   // For W3C Linked Data Integrity-protected VCs, a 'proof' is required
   // However, for JWT-protected VCs, 'proof' is optional (is external)
@@ -94,17 +78,17 @@ export interface VCDIVerifiableCredential extends LinkedDataObject {
 }
 
 // https://w3c.github.io/vc-data-model/#credential-subject
-export interface CredentialSubject extends LinkedDataObject {
+export interface ICredentialSubject extends ILinkedDataObject {
   // although a VC is required to have a `credentialSubject` property,
   // the spec does not require any properties inside it.
   [x: string]: any;
 }
 
 // https://w3c.github.io/vc-data-model/#status
-export interface CredentialStatus extends LinkedDataObject {
+export interface ICredentialStatus extends ILinkedDataObject {
   // id and type are required for `credentialStatus` by the VC spec
   id?: string;
-  type: LDType;
+  type: ILdType;
   [x: string]: any;
 
   // Each status type has its own required fields. For example:
@@ -115,48 +99,48 @@ export interface CredentialStatus extends LinkedDataObject {
 }
 
 // https://w3c.github.io/vc-data-model/#data-schemas
-export interface CredentialSchema {
+export interface ICredentialSchema {
   id: string;
   type: string;
   [x: string]: any;
 }
 
 // https://w3c.github.io/vc-data-model/#terms-of-use
-export interface TermsOfUse {
+export interface ITermsOfUse {
   id?: string;
   type: string;
   [x: string]: any;
 }
 
 // https://w3c.github.io/vc-data-model/#refreshing
-export interface RefreshService {
+export interface IRefreshService {
   type: string;
   [x: string]: any;
 }
 
 // https://w3c.github.io/vc-data-model/#integrity-of-related-resources
-export interface RelatedResource {
+export interface IRelatedResource {
   id: string;
   digestSRI: string;
   mediaType?: string;
 }
 
 // https://w3c.github.io/vc-data-model/#evidence
-export interface Evidence {
+export interface IEvidence {
   id?: string;
   type: string;
   [x: string]: any;
 }
 
 // https://w3c-ccg.github.io/confidence-method-spec
-export interface ConfidenceMethod {
+export interface IConfidenceMethod {
   id?: string;
   type: string;
   [x: string]: any;
 }
 
 // https://w3c-ccg.github.io/vc-render-method
-export interface RenderMethod {
+export interface IRenderMethod {
   type: string;
   [x: string]: any;
 }

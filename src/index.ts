@@ -1,5 +1,7 @@
 /*!
  * Copyright (c) 2022 Digital Credentials Consortium. All rights reserved.
  */
-export { VerifiableCredential } from './VerifiableCredential'
-export { VerifiablePresentation } from './VerifiablePresentation'
+export * from './LD'
+export * from './DID'
+export { IVerifiableCredential } from './VerifiableCredential'
+export { IVerifiablePresentation } from './VerifiablePresentation'

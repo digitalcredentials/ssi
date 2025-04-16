@@ -4,7 +4,7 @@
 import {
   LinkedDataObject,
   RefreshService,
-  Type,
+  LDType,
   VerifiableCredential
 } from './VerifiableCredential'
 
@@ -13,7 +13,7 @@ export interface VerifiablePresentation extends LinkedDataObject {
 
   // A 'type' property is required for VPs
   // see https://www.w3.org/TR/vc-data-model/#presentations-0
-  type: Type;
+  type: LDType;
 
   // Optional, expected to be a URI for the entity presenting the VP
   holder?: string;

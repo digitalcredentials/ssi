@@ -1,18 +1,18 @@
 /*!
  * Copyright (c) 2022 Digital Credentials Consortium. All rights reserved.
  */
-export type Type = string | string[];
+export type LDType = string | string[];
 
 export interface ImageObject {
   id: string;
-  type?: Type;
+  type?: LDType;
   [x: string]: any;
 }
 
 export interface LinkedDataObject {
   // id and type are very common to all Linked Data objects
   id?: string;
-  type?: Type;
+  type?: LDType;
 
   name?: string;
   description?: string;
@@ -45,7 +45,7 @@ export interface VCDIVerifiableCredential extends LinkedDataObject {
   id?: string;
 
   // https://w3c.github.io/vc-data-model/#types
-  type: Type;
+  type: LDType;
 
   // https://w3c.github.io/vc-data-model/#issuer
   issuer: string | IssuerObject;
@@ -104,7 +104,7 @@ export interface CredentialSubject extends LinkedDataObject {
 export interface CredentialStatus extends LinkedDataObject {
   // id and type are required for `credentialStatus` by the VC spec
   id?: string;
-  type: Type;
+  type: LDType;
   [x: string]: any;
 
   // Each status type has its own required fields. For example:

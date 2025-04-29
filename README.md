@@ -1,4 +1,4 @@
-# Verifiable Credentials Data Model _(@digitalcredentials/ssi)_
+# SSI Types and Data Model _(@digitalcredentials/ssi)_
 
 [![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/ssi/Node.js%20CI)](https://github.com/digitalcredentials/ssi/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/ssi.svg)](https://npm.im/@digitalcredentials/ssi)

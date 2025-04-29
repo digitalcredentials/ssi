@@ -1,6 +1,6 @@
 # SSI Types and Data Model _(@digitalcredentials/ssi)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/ssi/Node.js%20CI)](https://github.com/digitalcredentials/ssi/actions?query=workflow%3A%22Node.js+CI%22)
+[![Node.js CI](https://github.com/digitalcredentials/ssi/workflows/Node.js%20CI/badge.svg)](https://github.com/digitalcredentials/ssi/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/ssi.svg)](https://npm.im/@digitalcredentials/ssi)
 
 > Typescript types for the W3C Verifiable Credentials Data Model, DID Core, cryptosuites, etc.
@@ -52,7 +52,7 @@ of the specification (which will likely make breaking changes). So, in the futur
 
 ```
 "dependencies": {
-   "@digitalcredentials/ssi": "^2.0.0"
+   "@digitalcredentials/ssi": "^3.0.0"
 }
 ```
 

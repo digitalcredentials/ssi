@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022 Digital Credentials Consortium. All rights reserved.
+ * Copyright (c) 2025 Digital Credentials Consortium. All rights reserved.
  */
 export * from './LD'
 export * from './DID'

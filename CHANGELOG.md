@@ -4,6 +4,10 @@
 ### Changed
 - BREAKING: Rename repo to `ssi` from `vc-data-model`.
 
+### Added
+- Export `IDID` and `IDidDocument` interface.
+- Export keypair interfaces (`ISerializedKeyPair`, `IJsonWebKey`, `ISigner`, `IVerifier`).
+
 ## 2.0.0 - 2024-xx-xx
 ### Added
 - Implement VC Data Model v2.0

@@ -1,3 +1,6 @@
+/*!
+ * Copyright (c) 2025 Digital Credentials Consortium.
+ */
 export interface ISerializedKeyPair {
   '@context'?: string
   id?: string

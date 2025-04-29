@@ -6,7 +6,7 @@
 
 ### Added
 - Export `IDID` and `IDidDocument` interface.
-- Export keypair interfaces (`ISerializedKeyPair`, `IJsonWebKey`, `ISigner`, `IVerifier`).
+- Export key and keypair interfaces (`IKeyPair`, `IPublicKey`, `ISigner`, `IVerifier`).
 
 ## 2.0.0 - 2024-xx-xx
 ### Added

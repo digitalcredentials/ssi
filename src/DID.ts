@@ -1,7 +1,8 @@
 /*!
  * Copyright (c) 2025 Digital Credentials Consortium. All rights reserved.
  */
-import { ILdType } from './LD';
+import { ILdType } from './LD'
+import { IPublicKey } from './KeyPair'
 
 /**
  * A Decentralized Identifier (DID) URL
@@ -11,8 +12,10 @@ export type IDID = `did:${string}`
 
 export type IDidDocument = IDidDocument_v1_0 | IDidDocument_v1_1
 
-export type IKeyIdOrObject = string | object
+export type KeyId = string
+export type IKeyIdOrObject = KeyId | IPublicKey
 
+// @see https://www.w3.org/TR/cid-1.0/#services
 export interface IServiceObject {
   id?: string // a URL
   type: ILdType

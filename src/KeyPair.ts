@@ -2,10 +2,10 @@
  * Copyright (c) 2025 Digital Credentials Consortium.
  */
 export type IKeyPair = IVerificationKeyPair2018 | IVerificationKeyPair2020 |
-  IMultikeyPair | IJsonWebKeyPair2020
+  IMultikeyPair | IJsonWebKeyPair2020 | IJsonWebKeyPair
 
 export type IPublicKey = IPublicKey2018 | IPublicKey2020 | IPublicMultikey
-  | IJsonWebPublicKey2020
+  | IJsonWebPublicKey
 
 export interface IKeyPairCore {
   '@context'?: string
@@ -33,6 +33,9 @@ export interface IVerificationKeyPair2020 extends IPublicKey2020 {
   privateKeyMultibase?: string
 }
 
+/**
+ * @see https://www.w3.org/TR/cid-1.0/#Multikey
+ */
 export interface IPublicMultikey extends IKeyPairCore {
   publicKeyMultibase?: string
 }
@@ -40,19 +43,27 @@ export interface IMultikeyPair extends IPublicMultikey {
   secretKeyMultibase?: string
 }
 
-export interface IJsonWebPublicKey2020 {
+export interface IJsonWebPublicKey {
   // Used by JsonWebKey2020
   publicKeyJwk?: IJsonWebKey
 }
-export interface IJsonWebKeyPair2020 extends IJsonWebPublicKey2020 {
+export interface IJsonWebKeyPair2020 extends IJsonWebPublicKey {
   privateKeyJwk?: IJsonWebKey
 }
+// @see https://www.w3.org/TR/cid-1.0/#JsonWebKey
+export interface IJsonWebKeyPair extends IJsonWebPublicKey {
+  secretKeyJwk?: IJsonWebKey
+}
+
 export interface IJsonWebKey {
   // Key type, e.g. 'RSA' or 'OKP'
   kty?: string
 
   // Curve, used by elliptic cryptography keys (kty: 'OKP'), e.g. 'Ed25519'
   crv?: string
+
+  // Algorithm, e.g. 'ES384'
+  alg?: string
 
   // Public key, typically base64url encoded
   x?: string

@@ -43,7 +43,7 @@ export interface IMultikeyPair extends IPublicMultikey {
   secretKeyMultibase?: string
 }
 
-export interface IJsonWebPublicKey {
+export interface IJsonWebPublicKey extends IKeyPairCore {
   // Used by JsonWebKey2020
   publicKeyJwk?: IJsonWebKey
 }

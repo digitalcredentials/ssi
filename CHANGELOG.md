@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 3.0.1 -
+### Changed
+- Fix `IJsonWebPublicKey` (ensure it extends `IKeyPairCore`)
+
 ## 3.0.0 - 2025-04-29
 ### Changed
 - BREAKING: Rename repo to `ssi` from `vc-data-model`.

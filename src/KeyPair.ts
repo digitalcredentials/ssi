@@ -100,5 +100,6 @@ export interface IVerify {
 }
 export interface IVerifier {
   id?: string
+  algorithm?: string
   verify: (data: IVerify) => Promise<boolean>
 }

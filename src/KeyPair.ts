@@ -2,10 +2,10 @@
  * Copyright (c) 2025 Digital Credentials Consortium.
  */
 export type IKeyPair = IVerificationKeyPair2018 | IVerificationKeyPair2020 |
-  IMultikeyPair | IJsonWebKeyPair2020 | IJsonWebKeyPair
+IMultikeyPair | IJsonWebKeyPair2020 | IJsonWebKeyPair
 
 export type IPublicKey = IPublicKey2018 | IPublicKey2020 | IPublicMultikey
-  | IJsonWebPublicKey
+| IJsonWebPublicKey
 
 export interface IKeyPairCore {
   '@context'?: string
@@ -82,7 +82,7 @@ export interface IJsonWebKey {
   qi?: string
   y?: string
 
-  [key: string]: unknown;
+  [key: string]: unknown
 }
 
 export interface ISign {

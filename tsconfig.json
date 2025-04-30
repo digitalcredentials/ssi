@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "es2020",
+    "target": "es2022",
     "lib": ["es2020"],
     "module": "es6",
     "moduleResolution": "node",
@@ -13,7 +13,7 @@
   },
   "include": [
     "src/**/*",
-    ".eslintrc.js"
+    ".eslintrc.cjs"
   ],
   "exclude": ["test", "node_modules", "dist"]
 }

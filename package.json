@@ -1,45 +1,52 @@
 {
   "name": "@digitalcredentials/ssi",
   "description": "Typescript types for the W3C Verifiable Credentials Data Model.",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "scripts": {
     "build": "npm run clear && tsc -d",
     "clear": "rimraf dist/*",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "ts-standard --fix --project tsconfig.spec.json",
     "prepare": "npm run build",
     "prettier": "prettier src --write",
     "rebuild": "npm run clear && npm run build",
     "test": "npm run lint && npm run test-node",
-    "test-node": "cross-env NODE_ENV=test TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'test/*.ts'"
+    "test-node": "cross-env NODE_ENV=test mocha -r ts-node/register 'test/*.ts'"
   },
   "files": [
     "dist",
     "README.md",
     "LICENSE.md"
   ],
-  "module": "dist/index.js",
+  "type": "module",
   "browser": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./did": {
+      "types": "./src/DID.ts",
+      "default": "./dist/DID.js"
+    },
+    "./keypair": {
+      "types": "./src/KeyPair.ts",
+      "default": "./dist/KeyPair.js"
+    },
+    "./vcdm": {
+      "types": "./src/VCDM.ts",
+      "default": "./dist/VCDM.js"
+    }
+  },
   "devDependencies": {
     "@types/chai": "^5.2.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "^22.14.1",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
     "chai": "^4.3.7",
     "cross-env": "^7.0.3",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "mocha": "^10.1.0",
-    "prettier": "^2.8.0",
+    "mocha": "^10.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
+    "ts-standard": "^12.0.2",
     "typescript": "5.2.2"
   },
   "publishConfig": {

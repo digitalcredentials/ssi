@@ -60,12 +60,12 @@ export interface IDidCoreDocument {
  * @see https://www.w3.org/TR/did-1.0/
  */
 export interface IDidDocument_v1_0 extends IDidCoreDocument {
-  "@context": ["https://www.w3.org/ns/did/v1", ...(string|object)[]]
+  '@context': ['https://www.w3.org/ns/did/v1', ...Array<string | object>]
 }
 
 /**
  * @see https://www.w3.org/TR/did-1.1/
  */
 export interface IDidDocument_v1_1 extends IDidCoreDocument {
-  "@context": ["https://www.w3.org/ns/did/v1.1", ...(string|object)[]]
+  '@context': ['https://www.w3.org/ns/did/v1.1', ...Array<string | object>]
 }

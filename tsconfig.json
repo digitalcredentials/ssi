@@ -17,8 +17,7 @@
     "allowJs": true
   },
   "include": [
-    "src/**/*",
-    ".eslintrc.cjs"
+    "src/**/*"
   ],
-  "exclude": ["test", "node_modules", "dist"]
+  "exclude": ["test", "node_modules", "dist", ".eslintrc.cjs"]
 }

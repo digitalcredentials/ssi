@@ -15,7 +15,7 @@ await describe('VerifiableCredential', async () => {
   })
 })
 
-await describe('VerifiablePresentation', () => {
+await describe('VerifiablePresentation', async () => {
   await test('exists', async () => {
     const vp: IVerifiablePresentation = {
       '@context': ['http://example.com'],

@@ -5,11 +5,16 @@
     "lib": ["es2020"],
     "module": "es6",
     "moduleResolution": "node",
+    "declarationMap": true,
+    "declaration": true,
     "outDir": "dist",
     "noImplicitAny": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "checkJs": true,
+    "allowJs": true
   },
   "include": [
     "src/**/*",

@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2025 Digital Credentials Consortium. All rights reserved.
  */
-export * from './LD'
-export * from './DID'
-export * from './KeyPair'
-export * from './VCDM'
+export * from './LD.js'
+export * from './DID.js'
+export * from './KeyPair.js'
+export * from './VCDM.js'

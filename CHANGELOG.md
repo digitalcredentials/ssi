@@ -1,6 +1,6 @@
 # ssi Changelog
 
-## 3.0.1-3.0.2 - 2025-04-29
+## 3.0.1-3.0.3 - 2025-04-29
 ### Changed
 - Fix `IJsonWebPublicKey` (ensure it extends `IKeyPairCore`)
 

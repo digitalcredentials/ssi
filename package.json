@@ -1,16 +1,15 @@
 {
   "name": "@digitalcredentials/ssi",
   "description": "Typescript types for the W3C Verifiable Credentials Data Model.",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "scripts": {
     "build": "npm run clear && tsc -d",
     "clear": "rimraf dist/*",
     "lint": "ts-standard --fix --project tsconfig.spec.json",
     "prepare": "npm run build",
-    "prettier": "prettier src --write",
     "rebuild": "npm run clear && npm run build",
     "test": "npm run lint && npm run test-node",
-    "test-node": "cross-env NODE_ENV=test mocha -r ts-node/register 'test/*.ts'"
+    "test-node": "npx tsx --test test/*.spec.ts"
   },
   "files": [
     "dist",
@@ -18,22 +17,24 @@
     "LICENSE.md"
   ],
   "type": "module",
-  "browser": "dist/index.js",
+  "module": "./dist/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
+      "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./did": {
-      "types": "./src/DID.ts",
+      "types": "./dist/DID.d.ts",
       "default": "./dist/DID.js"
     },
     "./keypair": {
-      "types": "./src/KeyPair.ts",
+      "types": "./dist/KeyPair.d.ts",
       "default": "./dist/KeyPair.js"
     },
     "./vcdm": {
-      "types": "./src/VCDM.ts",
+      "types": "./dist/VCDM.d.ts",
       "default": "./dist/VCDM.js"
     }
   },
@@ -41,13 +42,13 @@
     "@types/chai": "^5.2.1",
     "@types/mocha": "^10.0.1",
     "@types/node": "^22.14.1",
-    "chai": "^4.3.7",
     "cross-env": "^7.0.3",
     "mocha": "^10.2.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "ts-standard": "^12.0.2",
-    "typescript": "5.2.2"
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.4"
   },
   "publishConfig": {
     "access": "public"
@@ -63,7 +64,7 @@
     "dcc"
   ],
   "engines": {
-    "node": ">=16.0"
+    "node": ">=20.0"
   },
   "author": {
     "name": "Digital Credentials Consortium",
@@ -72,7 +73,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalcredentials/vc-data-model"
+    "url": "git+https://github.com/digitalcredentials/vc-data-model.git"
   },
   "homepage": "https://github.com/digitalcredentials/vc-data-model",
   "bugs": "https://github.com/digitalcredentials/vc-data-model/issues"

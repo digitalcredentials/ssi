@@ -1,8 +1,9 @@
 # ssi Changelog
 
-## 3.0.1-3.0.4 - 2025-04-29
+## 3.0.1-3.0.5 - 2025-04-29
 ### Changed
 - Fix `IJsonWebPublicKey` (ensure it extends `IKeyPairCore`)
+- Add `algorithm` to `IVerifier` interface (to match multikey library).
 
 ## 3.0.0 - 2025-04-29
 ### Changed

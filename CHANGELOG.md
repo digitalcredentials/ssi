@@ -1,6 +1,6 @@
 # ssi Changelog
 
-## 4.0.0 -
+## 4.0.0 - 2025-08-22
 ### Changed
 - BREAKING: Fix `ISigner` interface, make signer.id mandatory (was optional before)
 - Rename `IVerify` interface to `IVerifiablePayload`

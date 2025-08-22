@@ -1,5 +1,11 @@
 # ssi Changelog
 
+## 4.0.0 -
+### Changed
+- BREAKING: Fix `ISigner` interface, make signer.id mandatory (was optional before)
+- Rename `IVerify` interface to `IVerifiablePayload`
+- Rename `ISign` interface to `ISignablePayload`
+
 ## 3.0.1-3.0.5 - 2025-04-29
 ### Changed
 - Fix `IJsonWebPublicKey` (ensure it extends `IKeyPairCore`)

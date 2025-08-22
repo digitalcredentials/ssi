@@ -85,21 +85,21 @@ export interface IJsonWebKey {
   [key: string]: unknown
 }
 
-export interface ISign {
+export interface ISignablePayload {
   data: Uint8Array
 }
 export interface ISigner {
-  id?: string
+  id: string
   algorithm?: string
-  sign: (signable: ISign) => Promise<Uint8Array>
+  sign: (signable: ISignablePayload) => Promise<Uint8Array>
 }
 
-export interface IVerify {
+export interface IVerifiablePayload {
   data: Uint8Array
   signature: Uint8Array
 }
 export interface IVerifier {
   id?: string
   algorithm?: string
-  verify: (data: IVerify) => Promise<boolean>
+  verify: (data: IVerifiablePayload) => Promise<boolean>
 }

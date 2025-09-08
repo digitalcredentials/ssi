@@ -10,15 +10,14 @@ export interface IIssuerObject extends ILinkedDataObject {
   [x: string]: any
 }
 
-export type IVerifiableCredential = IVCDIVerifiableCredential | ICompactJWT
-
 // Represents a Json Web Token in compact form: "header.payload.signature"
 export type ICompactJWT = string
 
 // Represents a Verifiable Credential protected by
 //   the Verifiable Credential Data Integrity 1.0 spec
 // @see https://www.w3.org/TR/vc-data-integrity/
-export interface IVCDIVerifiableCredential extends ILinkedDataObject {
+// Note: for JWS-protected VCs, see `ICompactJWT` property above
+export interface IVerifiableCredential extends ILinkedDataObject {
   // The first element of the @context array must be the VC context itself
   // Subsequent elements are either URLs for other contexts OR
   // inline context objects.
@@ -34,14 +33,20 @@ export interface IVCDIVerifiableCredential extends ILinkedDataObject {
   // https://w3c.github.io/vc-data-model/#issuer
   issuer: string | IIssuerObject
 
-  // https://w3c.github.io/vc-data-model/#validity-period
-  validFrom?: string
-
-  // https://w3c.github.io/vc-data-model/#validity-period
-  validUntil?: string
-
   // https://w3c.github.io/vc-data-model/#credential-subject
   credentialSubject: ICredentialSubject | ICredentialSubject[]
+
+  // VC Data Model 2.0 fields
+  // https://www.w3.org/TR/vc-data-model-2.0/#validity-period
+  validFrom?: string
+  // https://www.w3.org/TR/vc-data-model-2.0/#validity-period
+  validUntil?: string
+
+  // VC Data Model 1.0 fields (deprecated)
+  // https://www.w3.org/TR/2019/REC-vc-data-model-20191119/#issuance-date
+  issuanceDate?: string
+  // https://www.w3.org/TR/2019/REC-vc-data-model-20191119/#expiration
+  expirationDate?: string
 
   // https://w3c.github.io/vc-data-model/#status
   credentialStatus?: ICredentialStatus | ICredentialStatus[]

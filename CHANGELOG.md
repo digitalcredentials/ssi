@@ -1,5 +1,11 @@
 # ssi Changelog
 
+## 5.0.0 - 2025-09-07
+### Changed
+- BREAKING: Separate out `ICompactJWT` exported type to be standalone (was
+  making wallet code difficult.)
+- Add validity period fields from VC DM 1.0 (`issuanceDate` and `expirationDate`)
+
 ## 4.0.0 - 2025-08-22
 ### Changed
 - BREAKING: Fix `ISigner` interface, make signer.id mandatory (was optional before)

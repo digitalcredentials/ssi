@@ -87,6 +87,13 @@ import { IVerifiableCredential, IVerifiablePresentation } from '@digitalcredenti
 const vp = req.body.presentation as IVerifiablePresentation
 ```
 
+### Exported Types/Interfaces
+
+* `IVerifiableCredential` and `IVerifiablePresentation`
+* `IOpenBadgeCredentialV3` (for OBv3 VCs)
+* `IDidCoreDocument` and its children, `IDidDocument_v1_0` and `IDidDocument_v1_1`
+* ... others (see individual exports in `/src`)
+
 ## Contribute
 
 PRs accepted.

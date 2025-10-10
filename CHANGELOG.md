@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 5.1.0 - 2025-10-10
+### Added
+- Export `IOpenBadgeCredentialV3` interface.
+
 ## 5.0.0 - 2025-09-07
 ### Changed
 - BREAKING: Separate out `ICompactJWT` exported type to be standalone (was

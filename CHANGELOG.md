@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 5.2.0 -
+### Added
+- Add `identifier` property to `IOpenBadgeSubject` export.
+
 ## 5.1.0 - 2025-10-10
 ### Added
 - Export `IOpenBadgeCredentialV3` interface.

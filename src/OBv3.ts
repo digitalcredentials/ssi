@@ -7,11 +7,19 @@ import { IVerifiableCredential } from './VCDM.js'
 import { ILdType, ILinkedDataObject } from './LD.js'
 
 /**
- * OBv3 Credential (Assertion)
+ * OBv3 Credential
  * Extends W3C VC with an OBv3-specific credentialSubject
  */
 export interface IOpenBadgeCredentialV3 extends IVerifiableCredential {
   credentialSubject: IOpenBadgeSubject | IOpenBadgeSubject[]
+}
+
+export interface IOBv3IdentityObject {
+  hashed: boolean
+  // @see https://www.imsglobal.org/spec/ob/v3p0/#org.1edtech.ob.v3p0.identifiertypeenum.class
+  identityType?: string | string[]
+  identityHash?: string
+  salt?: string
 }
 
 /**
@@ -21,6 +29,7 @@ export interface IOpenBadgeCredentialV3 extends IVerifiableCredential {
 export interface IOpenBadgeSubject extends ILinkedDataObject {
   achievement: IAchievement | string
   evidence?: IOBv3Evidence | IOBv3Evidence[]
+  identifier?: IOBv3IdentityObject | IOBv3IdentityObject[]
   [x: string]: any
 }
 

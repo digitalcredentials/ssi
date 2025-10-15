@@ -1,7 +1,7 @@
 {
   "name": "@digitalcredentials/ssi",
   "description": "Typescript types for the W3C Verifiable Credentials Data Model.",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "scripts": {
     "build": "npm run clear && tsc -d",
     "clear": "rimraf dist/*",

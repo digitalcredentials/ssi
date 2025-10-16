@@ -1,6 +1,6 @@
 # ssi Changelog
 
-## 5.3.0 - 
+## 5.3.0 - 2025-10-15
 ### Added
 - Add `IKeyAgreementKeyPair2020` export.
 

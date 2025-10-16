@@ -25,9 +25,15 @@ export interface IVerificationKeyPair2018 extends IPublicKey2018 {
 }
 
 export interface IPublicKey2020 extends IKeyPairCore {
-  // Used by Ed25519VerificationKey2020
+  // Used by Ed25519VerificationKey2020 and X25519KeyAgreementKey2020
   publicKeyMultibase?: string
 }
+
+export interface IKeyAgreementKeyPair2020 extends IPublicKey2020 {
+  // Used by X25519KeyAgreementKey2020
+  privateKeyMultibase?: string
+}
+
 export interface IVerificationKeyPair2020 extends IPublicKey2020 {
   // Used by Ed25519VerificationKey2020
   privateKeyMultibase?: string

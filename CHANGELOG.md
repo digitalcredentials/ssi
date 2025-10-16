@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 5.3.0 - 
+### Added
+- Add `IKeyAgreementKeyPair2020` export.
+
 ## 5.2.0 - 2025-10-15
 ### Added
 - Add `identifier` property to `IOpenBadgeSubject` export.

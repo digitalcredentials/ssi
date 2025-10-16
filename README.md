@@ -92,6 +92,8 @@ const vp = req.body.presentation as IVerifiablePresentation
 * `IVerifiableCredential` and `IVerifiablePresentation`
 * `IOpenBadgeCredentialV3` (for OBv3 VCs)
 * `IDidCoreDocument` and its children, `IDidDocument_v1_0` and `IDidDocument_v1_1`
+* `IKeyPair` and its children, such as `IVerificationKeyPair2020` and `IKeyAgreementKeyPair2020`
+* `ISigner`
 * ... others (see individual exports in `/src`)
 
 ## Contribute

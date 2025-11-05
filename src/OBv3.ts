@@ -102,9 +102,9 @@ export interface ICriteria {
 
 /** Alignment between achievement and framework */
 export interface IAlignment {
-  type: ILdType
-  targetName: string
-  targetUrl: string
+  type?: ILdType
+  targetName?: string
+  targetUrl?: string
   targetCode?: string
   targetDescription?: string
   targetFramework?: string

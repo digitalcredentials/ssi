@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 5.4.0 - 2025-11-05
+### Changed
+- Modify `IAlignment` required fields to match LCW.
+
 ## 5.3.0 - 2025-10-15
 ### Added
 - Add `IKeyAgreementKeyPair2020` export.

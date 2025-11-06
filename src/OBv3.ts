@@ -11,7 +11,7 @@ import { ILdType, ILinkedDataObject } from './LD.js'
  * Extends W3C VC with an OBv3-specific credentialSubject
  */
 export interface IOpenBadgeCredentialV3 extends IVerifiableCredential {
-  credentialSubject: IOpenBadgeSubject | IOpenBadgeSubject[]
+  credentialSubject: IOpenBadgeSubject
 }
 
 export interface IOBv3IdentityObject {
@@ -28,8 +28,12 @@ export interface IOBv3IdentityObject {
  */
 export interface IOpenBadgeSubject extends ILinkedDataObject {
   achievement: IAchievement | string
+  activityEndDate?: string
+  activityStartDate?: string
   evidence?: IOBv3Evidence | IOBv3Evidence[]
   identifier?: IOBv3IdentityObject | IOBv3IdentityObject[]
+  narrative?: string
+  role?: string
   [x: string]: any
 }
 

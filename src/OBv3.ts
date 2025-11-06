@@ -27,7 +27,7 @@ export interface IOBv3IdentityObject {
  * https://www.imsglobal.org/spec/ob/v3p0/#credentialsubject
  */
 export interface IOpenBadgeSubject extends ILinkedDataObject {
-  achievement: IAchievement | string
+  achievement: IAchievement
   activityEndDate?: string
   activityStartDate?: string
   evidence?: IOBv3Evidence | IOBv3Evidence[]

@@ -1,6 +1,6 @@
 # ssi Changelog
 
-## 5.4.1 - 2025-11-05
+## 5.4.1-5.4.2 - 2025-11-05
 ### Changed
 - Fix OBv3 `credentialSubject` - only one subject allowed.
 

@@ -1,5 +1,9 @@
 # ssi Changelog
 
+## 5.5.0 - 2026-05-31
+### Added
+- Add exports of `IZcap` and related interfaces.
+
 ## 5.4.1-5.4.2 - 2025-11-05
 ### Changed
 - Fix OBv3 `credentialSubject` - only one subject allowed.

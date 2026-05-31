@@ -95,6 +95,7 @@ const vp = req.body.presentation as IVerifiablePresentation
 * `IKeyPair` and its children, such as `IVerificationKeyPair2020` and `IKeyAgreementKeyPair2020`
 * `ISigner`
 * ... others (see individual exports in `/src`)
+* `IZcap` and related interfaces (`IRootZcap`, `IDelegatedZcap`, `IZcapLike`, and `ICapabilityDelegationProof`)
 
 ## Contribute
 

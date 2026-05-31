@@ -35,6 +35,10 @@
     "./vcdm": {
       "types": "./dist/VCDM.d.ts",
       "default": "./dist/VCDM.js"
+    },
+    "./zcap": {
+      "types": "./dist/ZCap.d.ts",
+      "default": "./dist/ZCap.js"
     }
   },
   "devDependencies": {
